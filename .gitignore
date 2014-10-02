@@ -1,0 +1,28 @@
+# gitignore.io
+*.rbc
+capybara-*.html
+.rspec
+/log
+/tmp
+/db/*.sqlite3
+/public/system
+/coverage/
+/spec/tmp
+**.orig
+rerun.txt
+pickle-email-*.html
+
+config/initializers/secret_token.rb
+config/secrets.yml
+
+/.bundle
+/vendor/bundle
+
+.rvmrc
+
+/vendor/assets/bower_components
+*.bowerrc
+bower.json
+
+# me
+config/database.yml
