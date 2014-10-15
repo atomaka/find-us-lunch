@@ -10,7 +10,6 @@
   <tbody>
     <% @friendships.each do |friendship| %>
       <tr>
-        <td><%= link_to 'Show', friendship %></td>
         <td><%= link_to 'Destroy', friendship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -19,4 +18,4 @@
 
 <br>
 
-<%= link_to 'New Friendship', new_friendship_path %>
+<%= link_to 'Add a Friend', users_path %>
