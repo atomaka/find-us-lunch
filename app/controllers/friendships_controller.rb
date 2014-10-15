@@ -1,4 +1,5 @@
 class FriendshipsController < ApplicationController
+  before_action :require_login
   before_action :set_friendship, only: [:show, :destroy]
 
   def index
