@@ -18,7 +18,8 @@ class FriendshipsController < ApplicationController
   end
 
   def destroy
-    @friendship = Friendship.find(params[:id])
+    @friendship = Friendship.where(user_id: current_user.id,
+                                   friend_id: params[:id]).take
 
     @friendship.destroy
     flash[:success] = 'Friend has been removed from your friends'
