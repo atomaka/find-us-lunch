@@ -3,7 +3,6 @@ class FriendshipsController < ApplicationController
 
   def index
     @friends = current_user.friends
-    @friendships = Friendship.all
   end
 
   def create
