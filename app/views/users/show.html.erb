@@ -1,2 +1,4 @@
-<h1>User#show</h1>
-<p>Find me in app/views/user/show.html.erb</p>
+<h2><%= @user.name %></h2>
+Friends: <%= @user.friends.count %><br/>
+Created: <%= @user.created_at %><br/>
+Updarted: <%= @user.updated_at %><br/>

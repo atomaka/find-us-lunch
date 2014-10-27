@@ -1,4 +1,4 @@
-<h2>Listing friendships</h2>
+<h2>Friends List</h2>
 
 <table class="table table-striped table-hover">
   <thead>
@@ -13,7 +13,7 @@
   <tbody>
     <% @friendships.each do |friendship| %>
       <tr>
-        <td><%= friendship.friend.name %></td>
+        <td><%= link_to friendship.friend.name, friendship.friend %></td>
         <td><%= friendship.created_at %></td>
         <td><%= friendship.updated_at %></td>
         <td>[ <%= link_to 'Destroy', friendship, method: :delete,

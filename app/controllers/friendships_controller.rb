@@ -10,10 +10,10 @@ class FriendshipsController < ApplicationController
 
     if @friendship.save
       flash[:notice] = 'Added friend.'
-      redirect_to root_url
+      redirect_to friendships_path
     else
       flash[:notice] = 'Unable to add friend.'
-      redirect_to root_url
+      redirect_to users_path
     end
   end
 
