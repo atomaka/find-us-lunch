@@ -2,7 +2,7 @@ class FriendshipsController < ApplicationController
   before_action :require_login
 
   def index
-    @friends = current_user.friends
+    @friendships = Friendship.includes(:friend).where(user_id: current_user.id)
   end
 
   def create
@@ -18,8 +18,7 @@ class FriendshipsController < ApplicationController
   end
 
   def destroy
-    @friendship = Friendship.where(user_id: current_user.id,
-                                   friend_id: params[:id]).take
+    @friendship = Friendship.find(params[:id])
 
     @friendship.destroy
     flash[:success] = 'Friend has been removed from your friends'

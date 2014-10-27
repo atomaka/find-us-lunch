@@ -8,11 +8,11 @@
   </thead>
 
   <tbody>
-    <% @friends.each do |friend| %>
+    <% @friendships.each do |friendship| %>
       <tr>
-        <td><%= friend.name %></td>
-        <td><%= link_to 'Destroy', friendship_path(friend), method: :delete,
-          data: { confirm: 'Are you sure?' } %></td>
+        <td><%= friendship.friend.name %></td>
+        <td>[ <%= link_to 'Destroy', friendship, method: :delete,
+          data: { confirm: 'Are you sure?' } %> ]</td>
       </tr>
     <% end %>
   </tbody>
