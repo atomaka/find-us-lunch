@@ -10,4 +10,8 @@ class Friendship < ActiveRecord::Base
       errors.add(:friend_id, 'cannot refer back to self')
     end
   end
+
+  def error_messages
+    errors.full_messages.join(', ')
+  end
 end
