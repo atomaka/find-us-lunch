@@ -16,8 +16,8 @@
         <td><%= link_to friendship.friend.name, friendship.friend %></td>
         <td><%= friendship.created_at %></td>
         <td><%= friendship.updated_at %></td>
-        <td>[ <%= link_to 'Destroy', friendship, method: :delete,
-          data: { confirm: 'Are you sure?' } %> ]</td>
+        <td><%= link_to glyph('trash'), friendship, method: :delete,
+          data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
