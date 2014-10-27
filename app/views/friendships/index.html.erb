@@ -1,9 +1,12 @@
-<h1>Listing friendships</h1>
+<h2>Listing friendships</h2>
 
-<table>
+<table class="table table-striped table-hover">
   <thead>
     <tr>
-      <th colspan="3"></th>
+      <th>Name</th>
+      <th>Created</th>
+      <th>Updated</th>
+      <th>Actions</th>
     </tr>
   </thead>
 
@@ -11,6 +14,8 @@
     <% @friendships.each do |friendship| %>
       <tr>
         <td><%= friendship.friend.name %></td>
+        <td><%= friendship.created_at %></td>
+        <td><%= friendship.updated_at %></td>
         <td>[ <%= link_to 'Destroy', friendship, method: :delete,
           data: { confirm: 'Are you sure?' } %> ]</td>
       </tr>
