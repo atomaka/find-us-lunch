@@ -3,6 +3,10 @@ module ApplicationHelper
     bootstrap_classes[flash_type] || flash_type.to_s
   end
 
+  def glyph(icon)
+    content_tag(:i, class: "glyphicon glyphicon-#{icon}") {}
+  end
+
   private
 
   def bootstrap_classes

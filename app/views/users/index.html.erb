@@ -16,7 +16,8 @@
     <td><%= user.created_at %></td>
     <td><%= user.updated_at %></td>
     <td>
-      <%= link_to '+', friendships_path(:friend_id => user), :method => :post %>
+      <%= link_to glyph('plus'), friendships_path(:friend_id => user),
+        :method => :post %>
     </td>
   </tr>
 <% end %>
