@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resources :home, only: [ :show ]
   resources :friendships, only: [ :index, :show, :create, :destroy ]
+  resources :lunches
   resources :sessions, only: [ :create, :destroy ]
   resources :users, only: [ :index, :show ]
 
